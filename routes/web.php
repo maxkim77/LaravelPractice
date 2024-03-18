@@ -24,3 +24,7 @@ Route::get('get', [Newcontroller::class, "index"]);
 Route::get('/one', function() {
     return app(Acontroller::class)->multiple(2);
 });
+
+Route::get('/test', function() {
+    return "미들웨어 테스트 페이지 입니다.";
+})->middleware('test');
