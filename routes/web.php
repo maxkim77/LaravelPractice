@@ -34,3 +34,7 @@ Route::get('/some-route', function () {
 
 
 Route::get('/', [SampleController::class, 'index']);
+
+Route::get('/crud', function(){
+    return view('crud');
+});
