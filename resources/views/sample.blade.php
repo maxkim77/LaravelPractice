@@ -8,11 +8,15 @@
     @livewireStyles
 </head>
 <body>
-  <!-- 올바르게 Livewire 컴포넌트를 선언합니다. -->
+    <!-- 올바르게 Livewire 컴포넌트를 선언합니다.
     <livewire:welcome />
 
-    @livewireScripts
+    @livewireScripts -->
 
- 
+    @foreach ($data as $item)
+        <p>{{ $item->name }}</p>
+        <p>{{ $item->description }}</p>
+        <p>{{ $item->votes }}</p>
+    @endforeach
 </body>
 </html>

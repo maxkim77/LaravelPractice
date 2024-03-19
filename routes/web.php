@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Newcontroller;
 use App\Http\Controllers\Acontroller;
+use App\Http\Controllers\SampleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,7 @@ use App\Http\Controllers\Acontroller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('get', [Newcontroller::class, "index"]);
 
 Route::get('/one', function() {
@@ -32,3 +31,6 @@ Route::get('/test', function() {
 Route::get('/some-route', function () {
     return view('welcome', ['post' => 'livewire 실습 강의']);
 });
+
+
+Route::get('/', [SampleController::class, 'index']);
