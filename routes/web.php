@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Newcontroller;
 use App\Http\Controllers\Acontroller;
 use App\Http\Controllers\SampleController;
+use App\Http\Controllers\UploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,10 @@ Route::get('/', [SampleController::class, 'index']);
 Route::get('/crud', function(){
     return view('crud');
 });
+
+Route::get('/upload', function(){
+    return view('upload');
+});
+
+
+Route::post('/upload', [UploadController::class, 'upload'])->name('upload');

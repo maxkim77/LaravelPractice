@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- 올바르게 Livewire 컴포넌트를 선언합니다. -->
-    <livewire:welcome />
+    <livewire:upload />
 
     @livewireScripts
 
