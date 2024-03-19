@@ -28,3 +28,7 @@ Route::get('/one', function() {
 Route::get('/test', function() {
     return "미들웨어 테스트 페이지 입니다.";
 })->middleware('test');
+// Web.php 또는 해당하는 라우트 파일
+Route::get('/some-route', function () {
+    return view('welcome', ['post' => 'livewire 실습 강의']);
+});
